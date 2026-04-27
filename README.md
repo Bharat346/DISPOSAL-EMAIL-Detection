@@ -1,23 +1,22 @@
-# 🛡️ DJ Infinity - Email Trust Engine
+# Email Validator
 
-[![npm version](https://img.shields.io/npm/v/@bharat346/email-trust-engine.svg)](https://www.npmjs.com/package/@bharat346/email-trust-engine)
-<!-- [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) -->
+[![npm version](https://img.shields.io/npm/v/email-validation.svg)](https://www.npmjs.com/package/email-validation)
 
 A highly robust, multi-layer email trust engine for Node.js. It evaluates email addresses beyond simple regex, performing real-time security analysis, infrastructure checks, and behavioral heuristics to generate a comprehensive **Trust Score**.
 
-## 🌟 Key Features
+## Key Features
 
--   🔍 **7-Layer Validation Pipeline**: From syntax to SMTP existence.
--   ⚡ **Fast-Pass Logic**: Instant validation for popular providers (Gmail, Outlook, etc.).
--   🛡️ **Security Analysis**: Deep SPF & DMARC verification, including MX authorization.
--   🎣 **Advanced Catch-all Detection**: Multi-probe SMTP analysis to identify "accept-all" domains.
--   📉 **Reputation Scoring**: Domain age analysis and DNSBL blacklist checks.
--   🧠 **Behavioral Heuristics**: Detection of random/generated local parts.
--   🚀 **High Performance**: Parallelized checks and optional Redis caching.
+-   **7-Layer Validation Pipeline**: From syntax to SMTP existence.
+-   **Fast-Pass Logic**: Instant validation for popular providers (Gmail, Outlook, etc.).
+-   **Security Analysis**: Deep SPF & DMARC verification, including MX authorization.
+-   **Advanced Catch-all Detection**: Multi-probe SMTP analysis to identify "accept-all" domains.
+-   **Reputation Scoring**: Domain age analysis and DNSBL blacklist checks.
+-   **Behavioral Heuristics**: Detection of random/generated local parts.
+-   **High Performance**: Parallelized checks and optional Redis caching.
 
 ---
 
-## 🧱 Architecture
+## Architecture
 
 The engine evaluates every email through a weighted scoring system:
 
@@ -33,7 +32,7 @@ The engine evaluates every email through a weighted scoring system:
 ## 🚀 Installation
 
 ```bash
-npm install @dj-infinity/email-trust-engine
+npm install email-validation
 ```
 
 ## 💻 Usage
@@ -41,7 +40,7 @@ npm install @dj-infinity/email-trust-engine
 ### Basic Usage
 
 ```javascript
-const emailEngine = require('@dj-infinity/email-trust-engine');
+const emailEngine = require('email-validation');
 
 async function validate() {
     const result = await emailEngine.validate('user@example.com');
@@ -72,7 +71,7 @@ REDIS_PORT=6379
 
 | Category | Score | Description |
 | :--- | :--- | :--- |
-| **Trusted** | 80–100 | Verified mailbox on a reputable domain. |
+| **Trusted** | 70–100 | Verified mailbox on a reputable domain. |
 | **Risky** | 50–79 | suspicious infrastructure or low-reputation history. |
 | **Disposable** | 20–49 | Known temporary email provider. |
 | **Invalid** | 0–19 | Fake mailbox, non-existent domain, or blacklisted. |

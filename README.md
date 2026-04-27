@@ -1,6 +1,6 @@
-# Email Validator
+# TempMail Guard
 
-[![npm version](https://img.shields.io/npm/v/email-validation.svg)](https://www.npmjs.com/package/email-validation)
+[![npm version](https://img.shields.io/npm/v/tempmail-guard.svg)](https://www.npmjs.com/package/tempmail-guard)
 
 A highly robust, multi-layer email trust engine for Node.js. It evaluates email addresses beyond simple regex, performing real-time security analysis, infrastructure checks, and behavioral heuristics to generate a comprehensive **Trust Score**.
 
@@ -32,7 +32,7 @@ The engine evaluates every email through a weighted scoring system:
 ## 🚀 Installation
 
 ```bash
-npm install email-validation
+npm install tempmail-guard
 ```
 
 ## 💻 Usage
@@ -40,7 +40,7 @@ npm install email-validation
 ### Basic Usage
 
 ```javascript
-const emailEngine = require('email-validation');
+const emailEngine = require('tempmail-guard');
 
 async function validate() {
     const result = await emailEngine.validate('user@example.com');

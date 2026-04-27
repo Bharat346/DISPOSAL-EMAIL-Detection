@@ -38,10 +38,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Bharat346/DISPOSAL-EMAIL-Detection.git"
+    "url": "git+https://github.com/Bharat346/tempmail-guard.git"
   },
   "bugs": {
-    "url": "https://github.com/Bharat346/DISPOSAL-EMAIL-Detection/issues"
+    "url": "https://github.com/Bharat346/tempmail-guard/issues"
   },
-  "homepage": "https://github.com/Bharat346/DISPOSAL-EMAIL-Detection#readme"
+  "homepage": "https://github.com/Bharat346/tempmail-guard#readme"
 }

@@ -3,7 +3,11 @@
   "version": "1.0.3",
   "description": "A high-performance, multi-layer email trust engine for advanced validation, reputation scoring, and security analysis.",
   "main": "index.js",
+  "bin": {
+    "tempmail-guard": "./bin/cli.js"
+  },
   "files": [
+    "bin/",
     "index.js",
     "pipeline.js",
     "validators/",

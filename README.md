@@ -1,6 +1,7 @@
 # TempMail Guard
-
+<!-- https://img.shields.io/npm/v/tempmail-guard.svg -->
 [![npm version](https://img.shields.io/npm/v/tempmail-guard.svg)](https://www.npmjs.com/package/tempmail-guard)
+[![issues](https://img.shields.io/github/issues/Bharat346/tempmail-guard?style=flat-square)](https://github.com/Bharat346/tempmail-guard/issues)
 
 A highly robust, multi-layer email trust engine for Node.js. It evaluates email addresses beyond simple regex, performing real-time security analysis, infrastructure checks, and behavioral heuristics to generate a comprehensive **Trust Score**.
 
@@ -29,15 +30,28 @@ The engine evaluates every email through a weighted scoring system:
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ```bash
 npm install tempmail-guard
 ```
 
-## 💻 Usage
+## Usage
 
-### Basic Usage
+### As a CLI Tool (Recommended for scripting/quick checks)
+
+You can install it globally to use from anywhere in your terminal:
+
+```bash
+npm install -g tempmail-guard
+
+# Test an email directly
+tempmail-guard user@example.com
+# or
+npx tempmail-guard user@example.com
+```
+
+### As a Node.js Module
 
 ```javascript
 const emailEngine = require('tempmail-guard');
@@ -67,7 +81,7 @@ REDIS_PORT=6379
 
 ---
 
-## 📊 Classification Categories
+## Classification Categories
 
 | Category | Score | Description |
 | :--- | :--- | :--- |
@@ -78,7 +92,7 @@ REDIS_PORT=6379
 
 ---
 
-## 🚨 Auto-Fail Conditions
+## Auto-Fail Conditions
 
 The system immediately marks an email as `INVALID` (Score < 20) if:
 -   The domain has **No MX records**.
